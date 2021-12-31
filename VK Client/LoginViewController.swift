@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTestField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    let loginButtonSegue = "autorizationButtonPressed"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,13 +53,13 @@ class LoginViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
+/// при корректной авторизации продим в аккаунт клиента
     @IBAction func pressToLogin(_ sender: Any) {
         guard let login = loginTextField.text,
               let password = passwordTestField.text else {return}
         if login == "admin",
            password == "admin" {
-            print("Log in")
+            performSegue(withIdentifier: loginButtonSegue, sender: nil)
         } else {
             print("error")
         }
