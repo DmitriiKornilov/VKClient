@@ -114,28 +114,29 @@
         <!--Friends-->
         <scene sceneID="wnk-gw-1Zw">
             <objects>
-                <viewController id="AyY-tk-fGo" sceneMemberID="viewController">
+                <viewController id="AyY-tk-fGo" customClass="FriendsListController" customModule="VK_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O5f-VN-By1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7D-gD-eRK">
-                                <rect key="frame" x="172.5" y="432.5" width="69" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Gallary"/>
-                                <connections>
-                                    <segue destination="F2e-HN-CDU" kind="show" id="reb-wp-2H5"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CDf-gn-t0H">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Aw-EK-4DA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="B7D-gD-eRK" firstAttribute="centerY" secondItem="O5f-VN-By1" secondAttribute="centerY" id="4ei-C4-AWh"/>
-                            <constraint firstItem="B7D-gD-eRK" firstAttribute="centerX" secondItem="O5f-VN-By1" secondAttribute="centerX" id="a21-nh-Ebn"/>
+                            <constraint firstItem="CDf-gn-t0H" firstAttribute="leading" secondItem="6Aw-EK-4DA" secondAttribute="leading" id="1fx-cr-Sf0"/>
+                            <constraint firstItem="6Aw-EK-4DA" firstAttribute="trailing" secondItem="CDf-gn-t0H" secondAttribute="trailing" id="K6N-U1-dVU"/>
+                            <constraint firstItem="6Aw-EK-4DA" firstAttribute="bottom" secondItem="CDf-gn-t0H" secondAttribute="bottom" id="YWp-8T-4My"/>
+                            <constraint firstItem="CDf-gn-t0H" firstAttribute="top" secondItem="6Aw-EK-4DA" secondAttribute="top" id="n60-MV-hzk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="QPw-uS-7f6"/>
+                    <connections>
+                        <outlet property="tableView" destination="CDf-gn-t0H" id="aM4-MN-Wgv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynI-d8-GQd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,12 +165,13 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="VGo-qG-sJj"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BSp-c3-Gw3">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="HZm-lE-0pp" kind="relationship" relationship="viewControllers" id="EV9-x1-tXP"/>
                         <segue destination="bI0-ip-W4J" kind="relationship" relationship="viewControllers" id="iLn-y5-chL"/>
+                        <segue destination="HZm-lE-0pp" kind="relationship" relationship="viewControllers" id="EV9-x1-tXP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bL9-ra-13l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -179,12 +181,24 @@
         <!--My groups-->
         <scene sceneID="Rvq-6C-pui">
             <objects>
-                <viewController id="dcm-dX-Cln" sceneMemberID="viewController">
+                <viewController id="dcm-dX-Cln" customClass="MyGroupsListController" customModule="VK_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNb-6l-zFH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ol-aG-MYR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="z28-7Y-m02"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5ol-aG-MYR" firstAttribute="leading" secondItem="z28-7Y-m02" secondAttribute="leading" id="60u-1h-YLJ"/>
+                            <constraint firstItem="z28-7Y-m02" firstAttribute="trailing" secondItem="5ol-aG-MYR" secondAttribute="trailing" id="Xp6-iH-Btb"/>
+                            <constraint firstItem="z28-7Y-m02" firstAttribute="bottom" secondItem="5ol-aG-MYR" secondAttribute="bottom" id="hWZ-Lv-boE"/>
+                            <constraint firstItem="5ol-aG-MYR" firstAttribute="top" secondItem="z28-7Y-m02" secondAttribute="top" id="pQW-OD-88w"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My groups" id="V36-A6-56h">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="Klt-uF-mSZ">
@@ -193,6 +207,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="5ol-aG-MYR" id="btw-qy-2Fc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhy-61-rpd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,14 +218,29 @@
         <!--All groups-->
         <scene sceneID="ClO-Yd-d7S">
             <objects>
-                <viewController id="dTz-nE-pMl" sceneMemberID="viewController">
+                <viewController id="dTz-nE-pMl" customClass="AllGroupsListController" customModule="VK_Client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MHC-sb-3Vg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zsc-qy-caf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KlY-HI-EAY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zsc-qy-caf" firstAttribute="top" secondItem="KlY-HI-EAY" secondAttribute="top" id="O4r-MD-3zB"/>
+                            <constraint firstItem="KlY-HI-EAY" firstAttribute="trailing" secondItem="zsc-qy-caf" secondAttribute="trailing" id="Xuj-ci-bfX"/>
+                            <constraint firstItem="zsc-qy-caf" firstAttribute="leading" secondItem="KlY-HI-EAY" secondAttribute="leading" id="alY-ED-XIV"/>
+                            <constraint firstItem="KlY-HI-EAY" firstAttribute="bottom" secondItem="zsc-qy-caf" secondAttribute="bottom" id="mWJ-hW-xsd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="All groups" id="ofb-tQ-a11"/>
+                    <connections>
+                        <outlet property="tableView" destination="zsc-qy-caf" id="41A-zG-Tpe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVN-cc-3yB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
