@@ -53,7 +53,8 @@ class LoginViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-/// при корректной авторизации продим в аккаунт клиента
+
+/// при корректной авторизации проходим в аккаунт клиента, при неверных всплывает алерт
     @IBAction func pressToLogin(_ sender: Any) {
         guard let login = loginTextField.text,
               let password = passwordTestField.text else {return}
@@ -61,7 +62,18 @@ class LoginViewController: UIViewController {
            password == "admin" {
             performSegue(withIdentifier: loginButtonSegue, sender: nil)
         } else {
-            print("error")
+            alert(title: "Error", msg: "Incorect data entry", style: .alert)
         }
+    }
+
+    ///Метод для некоректного ввода данных
+    func alert(title: String, msg: String, style: UIAlertController.Style) {
+        let alertController = UIAlertController(title: title,
+                                                message: msg,
+                                                preferredStyle: style)
+        let action = UIAlertAction(title: "OK", style: .default) { (action) in
+        }
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
