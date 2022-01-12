@@ -10,6 +10,7 @@ import UIKit
 class AllGroupsListController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
 

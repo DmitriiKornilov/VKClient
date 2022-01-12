@@ -17,5 +17,9 @@ extension AllGroupsListController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         print(allGroups[indexPath.row])
+        
+        //передаем в центр выбраную группу
+        NotificationCenter.default.post(name: selectedGroupInAllGroupsPressedNotification, object: allGroups[indexPath.row])
+
     }
 }

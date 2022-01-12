@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import Foundation
 
 ///Стандартная высота ячейки
 let heighForCellTableView: CGFloat = 70
+
+
+let selectedGroupInAllGroupsPressedNotification =
+NSNotification.Name("selectedGroupInAllGroupsPressedNotification")

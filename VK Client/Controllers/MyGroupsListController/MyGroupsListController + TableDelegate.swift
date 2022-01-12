@@ -20,4 +20,14 @@ extension MyGroupsListController: UITableViewDelegate {
                    didSelectRowAt indexPath: IndexPath) {
         print(myGroups[indexPath.row])
     }
+
+    ///Метод удаления выделенной ячейки
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        myGroups.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+
 }
+
+
+
