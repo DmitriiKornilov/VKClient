@@ -18,12 +18,12 @@ extension MyGroupsListController: UITableViewDelegate {
     ///Метод нажатия на ячейку
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print(myGroups[indexPath.row])
+        print(Storage.share.myGroups[indexPath.row])
     }
 
     ///Метод удаления выделенной ячейки
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        myGroups.remove(at: indexPath.row)
+        Storage.share.myGroups.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
 

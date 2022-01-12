@@ -14,10 +14,6 @@ class AllGroupsListController: UIViewController {
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
 
-    let allGroups = ["Football", "Cinema", "iOS Development", "Apple",
-                     "Funny Videos", "DC Comics", "Marvel",
-                     "World of Warcraft Guides", "Ozon Sales"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

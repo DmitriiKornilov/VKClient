@@ -14,12 +14,12 @@ extension AllGroupsListController: UITableViewDelegate {
         return heighForCellTableView
     }
 
+    //при нажатии на группу добавляет ее в мои группы, если нету дубля
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print(allGroups[indexPath.row])
-        
-        //передаем в центр выбраную группу
-        NotificationCenter.default.post(name: selectedGroupInAllGroupsPressedNotification, object: allGroups[indexPath.row])
-
+        print(Storage.share.allGroups[indexPath.row])
+        if !Storage.share.isContains(item: indexPath.row) {
+            Storage.share.myGroups.append(Storage.share.allGroups[indexPath.row])
+        }
     }
 }

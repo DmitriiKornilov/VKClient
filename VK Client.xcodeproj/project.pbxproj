@@ -13,6 +13,7 @@
 		0A8A4FF92785C77000A28149 /* AllGroupsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4FF82785C77000A28149 /* AllGroupsListController.swift */; };
 		0A8A4FFC2785CA8D00A28149 /* AllGroupsListController + TableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4FFB2785CA8D00A28149 /* AllGroupsListController + TableDelegate.swift */; };
 		0A8A4FFE2785CB3F00A28149 /* AllGroupsListController + TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A4FFD2785CB3F00A28149 /* AllGroupsListController + TableDataSource.swift */; };
+		0A8A504B278F2AD000A28149 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8A504A278F2AD000A28149 /* Storage.swift */; };
 		0AC856FF277AF3A5004255E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC856FE277AF3A5004255E7 /* AppDelegate.swift */; };
 		0AC85701277AF3A5004255E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC85700277AF3A5004255E7 /* SceneDelegate.swift */; };
 		0AC85706277AF3A5004255E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC85704277AF3A5004255E7 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		0A8A4FF82785C77000A28149 /* AllGroupsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsListController.swift; sourceTree = "<group>"; };
 		0A8A4FFB2785CA8D00A28149 /* AllGroupsListController + TableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupsListController + TableDelegate.swift"; sourceTree = "<group>"; };
 		0A8A4FFD2785CB3F00A28149 /* AllGroupsListController + TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllGroupsListController + TableDataSource.swift"; sourceTree = "<group>"; };
+		0A8A504A278F2AD000A28149 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		0AC856FB277AF3A5004255E7 /* VK Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC856FE277AF3A5004255E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC85700277AF3A5004255E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				0AC856FE277AF3A5004255E7 /* AppDelegate.swift */,
 				0AC85700277AF3A5004255E7 /* SceneDelegate.swift */,
 				0AC8574227849460004255E7 /* Constants.swift */,
+				0A8A504A278F2AD000A28149 /* Storage.swift */,
 				0AC85704277AF3A5004255E7 /* Main.storyboard */,
 				0AC8573627848633004255E7 /* Controllers */,
 				0AC85707277AF3A8004255E7 /* Assets.xcassets */,
@@ -237,6 +240,7 @@
 				0A8A4FFE2785CB3F00A28149 /* AllGroupsListController + TableDataSource.swift in Sources */,
 				0AC8574327849460004255E7 /* Constants.swift in Sources */,
 				0A8A4FF52784AA7800A28149 /* MyGroupsListController + TableDelegate.swift in Sources */,
+				0A8A504B278F2AD000A28149 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

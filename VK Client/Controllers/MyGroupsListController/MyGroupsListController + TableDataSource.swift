@@ -12,7 +12,7 @@ extension MyGroupsListController: UITableViewDataSource {
     /// Метод для количества ячеек по количество друзей в массиве
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return myGroups.count
+        return Storage.share.myGroups.count
     }
 
     ///наполнение ячейки
@@ -23,7 +23,7 @@ extension MyGroupsListController: UITableViewDataSource {
                                               for: indexPath) as? UniversalTableViewCell else {return UITableViewCell()}
 
         cell.configure(image: nil,
-                       name: myGroups[indexPath.row],
+                       name: Storage.share.myGroups[indexPath.row],
                        description: nil)
         return cell
     }
