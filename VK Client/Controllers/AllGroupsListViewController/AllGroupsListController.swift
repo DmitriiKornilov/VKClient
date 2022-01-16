@@ -14,6 +14,8 @@ class AllGroupsListController: UIViewController {
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
 
+    var allGroups = [Group]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

@@ -17,6 +17,7 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fillFriendsData()
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardDidShow(_:)),
@@ -54,7 +55,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
-/// при корректной авторизации проходим в аккаунт клиента, при неверных всплывает алерт
+    /// при корректной авторизации проходим в аккаунт клиента, при неверных всплывает алерт
     @IBAction func pressToLogin(_ sender: Any) {
         guard let login = loginTextField.text,
               let password = passwordTestField.text else {return}
@@ -76,4 +77,36 @@ class LoginViewController: UIViewController {
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
+
+    //метод для заполнения friends из структуры Friend
+
+    func fillFriendsData() {
+        let friendOne = Friend(name: "SubZero",
+                               avatar: "SubZeroOne",
+                               Photos: ["SubZeroOne", "SubZeroTwo", "SubZeroThree"])
+        let friendTwo = Friend(name: "Scorpion",
+                               avatar: "ScorpionOne",
+                               Photos: ["ScorpionOne", "ScorpionTwo", "ScorpionThree"])
+        let friendThree = Friend(name: "Cyrex",
+                                 avatar: "CyrexOne",
+                                 Photos: ["CyrexOne", "CyrexTwo", "CyrexThree"])
+        let friendFour = Friend(name: "Goro",
+                                avatar: "GoroOne",
+                                Photos: ["GoroOne", "GoroTwo", "GoroThree"])
+        let friendFive = Friend(name: "Jax",
+                                avatar: "JaxOne",
+                                Photos: ["JaxOne", "JaxTwo", "JaxThree"])
+        let friendSix = Friend(name: "Kano",
+                               avatar: "KanoOne",
+                               Photos: ["KanoOne", "KanoTwo", "KanoThree"])
+
+        Storage.share.friends.append(friendOne)
+        Storage.share.friends.append(friendTwo)
+        Storage.share.friends.append(friendThree)
+        Storage.share.friends.append(friendFour)
+        Storage.share.friends.append(friendFive)
+        Storage.share.friends.append(friendSix)
+    }
 }
+
+

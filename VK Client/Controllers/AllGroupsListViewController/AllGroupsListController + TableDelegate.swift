@@ -18,8 +18,8 @@ extension AllGroupsListController: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         print(Storage.share.allGroups[indexPath.row])
-        if !Storage.share.isContains(item: indexPath.row) {
+//        if !Storage.share.isContains(item: indexPath.row) {
             Storage.share.myGroups.append(Storage.share.allGroups[indexPath.row])
-        }
+//        }
     }
 }

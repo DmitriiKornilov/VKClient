@@ -15,9 +15,18 @@ extension FriendsListController: UITableViewDelegate {
         return heighForCellTableView
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == fromMyFriendsToGallery,
+            let destenationController = segue.destination as? GalleryController,
+            let friend = sender as? Friend {
+                destenationController.photoArray = friend.Photos
+        }
+    }
+
     ///Метод нажатия на ячейку
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         print(friends[indexPath.row])
+        performSegue(withIdentifier: fromMyFriendsToGallery, sender: friends[indexPath.row])
     }
 }

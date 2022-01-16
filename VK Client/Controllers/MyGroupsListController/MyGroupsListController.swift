@@ -10,10 +10,9 @@ import UIKit
 class MyGroupsListController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
-
+    var myGroups = [Group]()
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,4 +28,5 @@ class MyGroupsListController: UIViewController {
                            forCellReuseIdentifier:
                             reuseIdentifierUniversalTableViewCell)
     }
+    
 }

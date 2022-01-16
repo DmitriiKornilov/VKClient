@@ -10,10 +10,14 @@ import UIKit
 class FriendsListController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
+    let fromMyFriendsToGallery = "fromMyFriendsToGallery"
 
-    let friends = ["Roman", "Dmitrii", "Masha", "Anna"]
+    let searchFriends = Storage.share.friends
+    var friends = [Friend]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +26,9 @@ class FriendsListController: UIViewController {
         tableView.register(UINib(nibName: "UniversalTableViewCell",
                                  bundle: nil), forCellReuseIdentifier:
                             reuseIdentifierUniversalTableViewCell)
+        searchBar.delegate = self
+        friends = searchFriends
     }
 }
+
+

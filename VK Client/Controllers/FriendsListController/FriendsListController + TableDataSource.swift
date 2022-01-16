@@ -21,9 +21,7 @@ extension FriendsListController: UITableViewDataSource {
         guard let cell =
                 tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUniversalTableViewCell, for: indexPath) as? UniversalTableViewCell else {return UITableViewCell()}
 
-        cell.configure(image: nil,
-                       name: friends[indexPath.row],
-                       description: nil)
+        cell.configure(friend: friends[indexPath.row])
         return cell
     }
 

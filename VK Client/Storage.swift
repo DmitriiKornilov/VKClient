@@ -23,6 +23,9 @@ class Storage: NSObject {
 
     var myGroups = [String]()
 
+
+var friends = [Friend]()
+
     ///проверка на дубли
     func isContains(item: Int) -> Bool {
         return Storage.share.myGroups.contains { myGroupsItem in
