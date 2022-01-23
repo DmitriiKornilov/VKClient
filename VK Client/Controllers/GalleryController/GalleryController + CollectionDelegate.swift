@@ -12,11 +12,12 @@ import UIKit
 extension GalleryController: UICollectionViewDelegate {
 
     ///при нажатии на фоточку в галерее она отображается
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
         let photoViewController = PhotoViewController()
         photoViewController.photo = photoArray[indexPath.item]
         self.navigationController?.pushViewController(photoViewController,
                                                       animated: true)
     }
-
 }
+

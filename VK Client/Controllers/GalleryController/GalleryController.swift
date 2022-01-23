@@ -13,21 +13,16 @@ class GalleryController: UIViewController {
 
 let reuseIdentifireGalleryCell = "reuseIdentifireGalleryCell"
     var photoArray = [String]()
-    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collectionView.reloadData()
     }
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifireGalleryCell)
-
     }
-
-
 }

@@ -5,9 +5,7 @@
 //  Created by Дмитрий Корнилов on 16.01.2022.
 //
 
-import Foundation
 import UIKit
-
 
 extension GalleryController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -19,6 +17,4 @@ extension GalleryController: UICollectionViewDataSource {
         cell.configure(photoPath: photoArray[indexPath.row])
         return cell
     }
-
-
 }
