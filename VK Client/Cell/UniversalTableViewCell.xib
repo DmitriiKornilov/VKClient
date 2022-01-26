@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,17 +45,29 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFO-bR-OuI">
+                        <rect key="frame" x="0.0" y="0.0" width="491" height="143"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="pressForAnimationOfAvatar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ukl-1o-eLQ"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="QFO-bR-OuI" secondAttribute="trailing" id="3Vh-o8-Kkj"/>
                     <constraint firstItem="FE2-mQ-omz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="112" id="9nY-6e-sdJ"/>
                     <constraint firstItem="FE2-mQ-omz" firstAttribute="leading" secondItem="6m9-nE-Q03" secondAttribute="trailing" constant="5" id="Alz-z8-hoB"/>
                     <constraint firstItem="AA8-z3-til" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="E2e-Xc-uFF"/>
+                    <constraint firstAttribute="bottom" secondItem="QFO-bR-OuI" secondAttribute="bottom" id="EUw-ZK-uyu"/>
                     <constraint firstAttribute="trailing" secondItem="AA8-z3-til" secondAttribute="trailing" constant="358" id="FJn-bC-g5J"/>
                     <constraint firstItem="6m9-nE-Q03" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Kzc-YF-yMQ"/>
+                    <constraint firstItem="QFO-bR-OuI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MdP-zD-TpC"/>
                     <constraint firstAttribute="centerY" secondItem="qmo-bL-MTj" secondAttribute="bottom" constant="5" id="PgS-An-T8z"/>
                     <constraint firstItem="AA8-z3-til" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VQo-Yz-fUs"/>
                     <constraint firstItem="6m9-nE-Q03" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fzG-8y-gHa"/>
                     <constraint firstAttribute="bottom" secondItem="FE2-mQ-omz" secondAttribute="bottom" constant="10" id="hVh-e0-wDQ"/>
+                    <constraint firstItem="QFO-bR-OuI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="lzH-MU-zyC"/>
                     <constraint firstItem="qmo-bL-MTj" firstAttribute="leading" secondItem="6m9-nE-Q03" secondAttribute="trailing" constant="5" id="tcH-m9-11A"/>
                 </constraints>
             </tableViewCellContentView>

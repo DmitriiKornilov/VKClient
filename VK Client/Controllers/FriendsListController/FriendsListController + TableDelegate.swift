@@ -24,9 +24,8 @@ extension FriendsListController: UITableViewDelegate {
     }
 
     ///Метод нажатия на ячейку
-    func tableView(_ tableView: UITableView,
-                   didSelectRowAt indexPath: IndexPath) {
-        print(friends[indexPath.row])
-        performSegue(withIdentifier: fromMyFriendsToGallery, sender: friends[indexPath.row])
-    }
+//    func tableView(_ tableView: UITableView,
+//                   didSelectRowAt indexPath: IndexPath) {
+//        print(friends[indexPath.row])
+//    }
 }

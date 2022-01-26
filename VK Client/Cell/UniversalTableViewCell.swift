@@ -14,13 +14,14 @@ class UniversalTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var roundForImageView: UIView!
-
+    var completion: (() -> Void)?
 
     ///чистим перед использованием
     override func prepareForReuse() {
         mainImageView.image = nil
         nameLabel.text = nil
         descriptionLabel.text = nil
+        self.completion = nil
     }
 
     override func awakeFromNib() {
@@ -42,10 +43,20 @@ class UniversalTableViewCell: UITableViewCell {
         descriptionLabel.text = description
     }
 
-    func configure(friend: Friend) {
+    func configure(friend: Friend, completion: @escaping () -> Void) {
+        self.completion = completion
         mainImageView.image = UIImage(named: friend.avatar)
         nameLabel.text = friend.name
         descriptionLabel.text = String()
 
+    }
+
+    @IBAction func pressForAnimationOfAvatar(_ sender: Any) {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.mainImageView.frame = CGRect.zero
+
+        } completion: { [weak self] _ in
+            self?.completion?()
+        }
     }
 }
