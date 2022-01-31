@@ -14,13 +14,15 @@ class AllGroupsListController: UIViewController {
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
 
-    var allGroups = [Group]()
+    var allGroups = Storage.share.allGroups
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "UniversalTableViewCell",
-                                 bundle: nil), forCellReuseIdentifier: reuseIdentifierUniversalTableViewCell)
+                                 bundle: nil),
+                           forCellReuseIdentifier:
+                            reuseIdentifierUniversalTableViewCell)
     }
 }

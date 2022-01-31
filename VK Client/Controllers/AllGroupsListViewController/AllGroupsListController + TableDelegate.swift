@@ -17,9 +17,9 @@ extension AllGroupsListController: UITableViewDelegate {
     //при нажатии на группу добавляет ее в мои группы, если нету дубля
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
-        print(Storage.share.allGroups[indexPath.row])
+//        print(Storage.share.allGroups[indexPath.row].name)
 //        if !Storage.share.isContains(item: indexPath.row) {
-            Storage.share.myGroups.append(Storage.share.allGroups[indexPath.row])
-//        }
+
+        Storage.share.myGroups.append(Storage.share.allGroups[indexPath.row])
     }
 }

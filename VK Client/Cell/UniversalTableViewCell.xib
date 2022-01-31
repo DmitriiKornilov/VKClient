@@ -22,6 +22,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-mQ-omz">
+                        <rect key="frame" x="138" y="112" width="333" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AA8-z3-til">
                         <rect key="frame" x="10" y="10" width="123" height="123"/>
                         <subviews>
@@ -39,16 +45,10 @@
                             <constraint firstItem="6m9-nE-Q03" firstAttribute="centerY" secondItem="AA8-z3-til" secondAttribute="centerY" id="h1Q-iw-PyC"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE2-mQ-omz">
-                        <rect key="frame" x="138" y="112" width="41.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFO-bR-OuI">
                         <rect key="frame" x="0.0" y="0.0" width="491" height="143"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain"/>
+                        <buttonConfiguration key="configuration" style="plain" title=""/>
                         <connections>
                             <action selector="pressForAnimationOfAvatar:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ukl-1o-eLQ"/>
                         </connections>
@@ -56,7 +56,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="QFO-bR-OuI" secondAttribute="trailing" id="3Vh-o8-Kkj"/>
-                    <constraint firstItem="FE2-mQ-omz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="112" id="9nY-6e-sdJ"/>
+                    <constraint firstItem="FE2-mQ-omz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="9nY-6e-sdJ"/>
                     <constraint firstItem="FE2-mQ-omz" firstAttribute="leading" secondItem="6m9-nE-Q03" secondAttribute="trailing" constant="5" id="Alz-z8-hoB"/>
                     <constraint firstItem="AA8-z3-til" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="E2e-Xc-uFF"/>
                     <constraint firstAttribute="bottom" secondItem="QFO-bR-OuI" secondAttribute="bottom" id="EUw-ZK-uyu"/>

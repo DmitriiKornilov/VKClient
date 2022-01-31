@@ -21,13 +21,12 @@ extension FriendsListController: UITableViewDataSource {
         guard let cell =
                 tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUniversalTableViewCell, for: indexPath) as? UniversalTableViewCell else {return UITableViewCell()}
 
-        cell.configure(friend: friends[indexPath.row], completion: { [weak self] in
+        cell.configureFriend(friend: friends[indexPath.row], completion: { [weak self] in
             guard let self = self else {return}
             self.performSegue(withIdentifier: self.fromMyFriendsToGallery,
                               sender: self.friends[indexPath.row])
             })
         return cell
     }
-
 
 }

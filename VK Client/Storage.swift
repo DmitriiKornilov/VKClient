@@ -17,21 +17,18 @@ class Storage: NSObject {
 
     //переменные и функции которые доступны во всей программе
     
-    let allGroups = ["Football", "Cinema", "iOS Development", "Apple",
-                     "Funny Videos", "DC Comics", "Marvel",
-                     "World of Warcraft Guides", "Ozon Sales"]
+    var allGroups = [Group]()
 
-    var myGroups = [String]()
+    var myGroups = [Group]()
 
-
-var friends = [Friend]()
+    var friends = [Friend]()
 
     ///проверка на дубли
-    func isContains(item: Int) -> Bool {
-        return Storage.share.myGroups.contains { myGroupsItem in
-            myGroupsItem == Storage.share.allGroups[item]
-        }
-    }
+//    func isContains(item: Int) -> Bool {
+//        return Storage.share.myGroups.contains { myGroupsItem in
+//            myGroupsItem == Storage.share.allGroups[item]
+//        }
+//    }
 
 
 

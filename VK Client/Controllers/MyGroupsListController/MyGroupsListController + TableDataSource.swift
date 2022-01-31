@@ -22,11 +22,7 @@ extension MyGroupsListController: UITableViewDataSource {
                 tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUniversalTableViewCell,
                                               for: indexPath) as? UniversalTableViewCell else {return UITableViewCell()}
 
-        cell.configure(image: nil,
-                       name: Storage.share.myGroups[indexPath.row],
-                       description: nil)
+        cell.configureGroup(allGroups: myGroups[indexPath.row])
         return cell
     }
-
-
 }

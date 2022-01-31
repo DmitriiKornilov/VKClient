@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fillFriendsData()
+        fillDataAllGroups()
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardDidShow(_:)),
@@ -106,6 +107,22 @@ class LoginViewController: UIViewController {
         Storage.share.friends.append(friendFour)
         Storage.share.friends.append(friendFive)
         Storage.share.friends.append(friendSix)
+    }
+
+    func fillDataAllGroups() {
+        let groupOne = Group(name: "Cinema",
+                             avatar: "cinema",
+                             discription: "Все о кино")
+        let groupTwo = Group(name: "Football",
+                             avatar: "football",
+                             discription: "Новости о футболе")
+        let groupThree = Group(name: "iOsDev",
+                               avatar: "iOsDev",
+                               discription: "iOsDev")
+
+        Storage.share.allGroups.append(groupOne)
+        Storage.share.allGroups.append(groupTwo)
+        Storage.share.allGroups.append(groupThree)
     }
 }
 

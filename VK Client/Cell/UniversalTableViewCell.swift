@@ -12,6 +12,7 @@ class UniversalTableViewCell: UITableViewCell {
     ///прокидываем аутлеты
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var roundForImageView: UIView!
     var completion: (() -> Void)?
@@ -20,7 +21,7 @@ class UniversalTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         mainImageView.image = nil
         nameLabel.text = nil
-        descriptionLabel.text = nil
+descriptionLabel.text = nil
         self.completion = nil
     }
 
@@ -33,22 +34,19 @@ class UniversalTableViewCell: UITableViewCell {
 
     }
 
-
     ///конфигурация наполнения ячейки
-    func configure(image: UIImage?,
-                   name: String?,
-                   description: String?) {
-        mainImageView.image = image
-        nameLabel.text = name
-        descriptionLabel.text = description
+
+    func configureGroup(allGroups: Group) {
+        mainImageView.image = UIImage(named: allGroups.avatar)
+        nameLabel.text = allGroups.name
+        descriptionLabel.text = allGroups.discription
     }
 
-    func configure(friend: Friend, completion: @escaping () -> Void) {
+    func configureFriend(friend: Friend, completion: @escaping () -> Void) {
         self.completion = completion
         mainImageView.image = UIImage(named: friend.avatar)
         nameLabel.text = friend.name
-        descriptionLabel.text = String()
-
+        descriptionLabel.text = nil
     }
 
     @IBAction func pressForAnimationOfAvatar(_ sender: Any) {
@@ -60,3 +58,4 @@ class UniversalTableViewCell: UITableViewCell {
         }
     }
 }
+
