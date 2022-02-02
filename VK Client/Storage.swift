@@ -23,19 +23,18 @@ class Storage: NSObject {
 
     var friends = [Friend]()
 
-    ///проверка на дубли
-//    func isContains(item: Int) -> Bool {
+    //проверка на дубли
+//    func isContains(item: [Group]) -> Bool {
 //        return Storage.share.myGroups.contains { myGroupsItem in
-//            myGroupsItem == Storage.share.allGroups[item]
+//            var myGroupsItem = Storage.share.allGroups[item]
 //        }
 //    }
 
-
-
-
-
-
-
+    func isContains(item: Int) -> Bool {
+        return Storage.share.myGroups.contains { myGroupsItem in
+               myGroupsItem == Storage.share.allGroups[item]
+           }
+       }
 }
 
 

@@ -12,7 +12,7 @@ class UniversalTableViewCell: UITableViewCell {
     ///прокидываем аутлеты
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-
+    @IBOutlet weak var pressedButtonOnCell: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var roundForImageView: UIView!
     var completion: (() -> Void)?
@@ -21,7 +21,7 @@ class UniversalTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         mainImageView.image = nil
         nameLabel.text = nil
-descriptionLabel.text = nil
+        descriptionLabel.text = nil
         self.completion = nil
     }
 
@@ -52,10 +52,11 @@ descriptionLabel.text = nil
     @IBAction func pressForAnimationOfAvatar(_ sender: Any) {
         UIView.animate(withDuration: 0.5) { [weak self] in
             self?.mainImageView.frame = CGRect.zero
-
         } completion: { [weak self] _ in
             self?.completion?()
         }
     }
+   
+
 }
 

@@ -23,7 +23,7 @@ extension FriendsListController: UITableViewDelegate {
         }
     }
 
-    ///Метод нажатия на ячейку
+//    //Метод нажатия на ячейку
 //    func tableView(_ tableView: UITableView,
 //                   didSelectRowAt indexPath: IndexPath) {
 //        print(friends[indexPath.row])

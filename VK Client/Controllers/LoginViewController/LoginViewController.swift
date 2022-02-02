@@ -84,22 +84,34 @@ class LoginViewController: UIViewController {
     func fillFriendsData() {
         let friendOne = Friend(name: "SubZero",
                                avatar: "SubZeroOne",
-                               Photos: ["SubZeroOne", "SubZeroTwo", "SubZeroThree"])
+                               Photos: ["SubZeroOne",
+                                        "SubZeroTwo",
+                                        "SubZeroThree"])
         let friendTwo = Friend(name: "Scorpion",
                                avatar: "ScorpionOne",
-                               Photos: ["ScorpionOne", "ScorpionTwo", "ScorpionThree"])
+                               Photos: ["ScorpionOne",
+                                        "ScorpionTwo",
+                                        "ScorpionThree"])
         let friendThree = Friend(name: "Cyrex",
                                  avatar: "CyrexOne",
-                                 Photos: ["CyrexOne", "CyrexTwo", "CyrexThree"])
+                                 Photos: ["CyrexOne",
+                                          "CyrexTwo",
+                                          "CyrexThree"])
         let friendFour = Friend(name: "Goro",
                                 avatar: "GoroOne",
-                                Photos: ["GoroOne", "GoroTwo", "GoroThree"])
+                                Photos: ["GoroOne",
+                                         "GoroTwo",
+                                         "GoroThree"])
         let friendFive = Friend(name: "Jax",
                                 avatar: "JaxOne",
-                                Photos: ["JaxOne", "JaxTwo", "JaxThree"])
+                                Photos: ["JaxOne",
+                                         "JaxTwo",
+                                         "JaxThree"])
         let friendSix = Friend(name: "Kano",
                                avatar: "KanoOne",
-                               Photos: ["KanoOne", "KanoTwo", "KanoThree"])
+                               Photos: ["KanoOne",
+                                        "KanoTwo",
+                                        "KanoThree"])
 
         Storage.share.friends.append(friendOne)
         Storage.share.friends.append(friendTwo)

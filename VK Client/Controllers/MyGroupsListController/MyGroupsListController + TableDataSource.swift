@@ -22,7 +22,10 @@ extension MyGroupsListController: UITableViewDataSource {
                 tableView.dequeueReusableCell(withIdentifier: reuseIdentifierUniversalTableViewCell,
                                               for: indexPath) as? UniversalTableViewCell else {return UITableViewCell()}
 
-        cell.configureGroup(allGroups: myGroups[indexPath.row])
+        cell.configureGroup(allGroups: Storage.share.myGroups[indexPath.row])
         return cell
     }
 }
+
+
+//    Storage.share.myGroups[indexPath.row]
