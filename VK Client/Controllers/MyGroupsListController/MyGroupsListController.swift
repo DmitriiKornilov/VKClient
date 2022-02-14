@@ -30,5 +30,4 @@ class MyGroupsListController: UIViewController {
                            forCellReuseIdentifier:
                             reuseIdentifierUniversalTableViewCell)
     }
-    
 }

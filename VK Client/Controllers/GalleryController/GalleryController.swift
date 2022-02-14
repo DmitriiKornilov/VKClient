@@ -23,6 +23,8 @@ let reuseIdentifireGalleryCell = "reuseIdentifireGalleryCell"
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "GalleryCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifireGalleryCell)
+        collectionView.register(UINib(nibName: "GalleryCell",
+                                      bundle: nil),
+                                forCellWithReuseIdentifier: reuseIdentifireGalleryCell)
     }
 }

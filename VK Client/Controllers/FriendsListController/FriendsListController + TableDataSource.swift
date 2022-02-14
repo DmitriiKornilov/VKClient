@@ -28,5 +28,4 @@ extension FriendsListController: UITableViewDataSource {
             })
         return cell
     }
-
 }

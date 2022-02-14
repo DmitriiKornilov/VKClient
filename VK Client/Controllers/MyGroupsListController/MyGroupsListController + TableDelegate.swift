@@ -26,7 +26,6 @@ extension MyGroupsListController: UITableViewDelegate {
         Storage.share.myGroups.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
     }
-
 }
 
 

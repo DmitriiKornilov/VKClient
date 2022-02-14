@@ -16,6 +16,7 @@ extension GalleryController: UICollectionViewDelegate {
                         didSelectItemAt indexPath: IndexPath) {
         let photoViewController = PhotoViewController()
         photoViewController.photo = photoArray[indexPath.item]
+        
         self.navigationController?.pushViewController(photoViewController,
                                                       animated: true)
     }

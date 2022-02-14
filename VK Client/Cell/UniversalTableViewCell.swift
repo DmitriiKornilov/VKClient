@@ -31,7 +31,6 @@ class UniversalTableViewCell: UITableViewCell {
         roundForImageView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         roundForImageView.layer.shadowOpacity = 0.7
         roundForImageView.layer.shadowRadius = 5
-
     }
 
     ///конфигурация наполнения ячейки
@@ -56,7 +55,5 @@ class UniversalTableViewCell: UITableViewCell {
             self?.completion?()
         }
     }
-   
-
 }
 

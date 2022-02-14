@@ -26,6 +26,7 @@ extension AllGroupsListController: UITableViewDataSource {
         cell.pressedButtonOnCell.addTarget(self, action: #selector(didTapCellButton(sender:)), for: .touchUpInside)
         return cell
     }
+    
     //метод добавления ячейки в мои группы, попробовать релизовать в делегате
     @objc func didTapCellButton(sender:UIButton) {
         let button = sender

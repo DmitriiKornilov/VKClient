@@ -7,6 +7,7 @@
 
 import UIKit
 
+///MARK: -удалить, тестовое задание
 class LoadingViewController: UIViewController {
 
     @IBOutlet weak var firstLoad: UIView!

@@ -23,6 +23,6 @@ class PhotoViewController: UIViewController {
                                height: self.view.bounds.width))
         self.view.addSubview(imageView)
         imageView.image = UIImage(named: photo)
-
+        imageView.contentMode = .scaleAspectFit
     }
 }

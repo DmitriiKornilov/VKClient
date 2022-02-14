@@ -21,5 +21,6 @@ class GalleryCell: UICollectionViewCell {
     
     func configure(photoPath: String) {
         photoImageView.image = UIImage(named: photoPath)
+        photoImageView.contentMode = .scaleAspectFit
     }
 }
