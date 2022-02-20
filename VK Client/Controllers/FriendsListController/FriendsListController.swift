@@ -11,6 +11,10 @@ class FriendsListController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    private let friendsVkApi = FriendsVKController()
+    private let allGroupsOfUser = AllGroupsVKController()
+    private let loadPhotos = PhotoVKViewController()
+
 
     let reuseIdentifierUniversalTableViewCell =
     "reuseIdentifierUniversalTableViewCell"
@@ -21,6 +25,10 @@ class FriendsListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        friendsVkApi.loadFriends()
+        allGroupsOfUser.loadAllGroupsVK()
+        loadPhotos.loadPhotos()
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "UniversalTableViewCell",
